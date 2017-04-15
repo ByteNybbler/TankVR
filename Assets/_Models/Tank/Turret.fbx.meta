@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 70a500743fd16d54995aa06c5fd822b2
-timeCreated: 1492240467
+guid: c6338115f58cc764c86af2f82b6c63cf
+timeCreated: 1492252018
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,9 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: pasted__pasted__pPipe5
-    4300002: UpperTurret
-    4300004: Turret
+    4300000: pPipe2
     9500000: //RootNode
   materials:
     importMaterials: 1
