@@ -15,7 +15,6 @@ public class ShellShooter : MonoBehaviour
     public void FireShell()
     {
         GameObject shell = Instantiate(prefabShell, transform.position, transform.rotation);
-        shell.GetComponent<Shell>().Fire();
     }
 
     private void Start()

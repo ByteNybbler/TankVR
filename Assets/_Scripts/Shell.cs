@@ -18,6 +18,12 @@ public class Shell : MonoBehaviour
         compRigidbody = GetComponent<Rigidbody>();
     }
 
+    private void Start()
+    {
+        Fire();
+    }
+
+    // Fire the shell.
     public void Fire()
     {
         compRigidbody.AddForce(transform.rotation * Vector3.forward * launchForce, ForceMode.Impulse);
