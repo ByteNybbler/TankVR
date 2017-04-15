@@ -11,11 +11,9 @@ public class ShellCasing : MonoBehaviour
     public GameObject prefabShell;
     [Tooltip("Casing prefab to instantiate upon firing.")]
     public GameObject prefabCasing;
-    [Tooltip("The shell emitter instance. This is the object from which the shell is fired.")]
-    public GameObject instanceShellEmitter;
 
-    // Separate the shell and the casing.
-    public void Fire()
+    // Separate the shell and the casing; fire the shell from the shell emitter.
+    public void Fire(GameObject instanceShellEmitter)
     {
         // Fire the shell.
         GameObject shell = Instantiate(prefabShell, instanceShellEmitter.transform.position, instanceShellEmitter.transform.rotation);
