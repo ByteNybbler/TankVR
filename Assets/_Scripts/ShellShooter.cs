@@ -9,16 +9,13 @@ public class ShellShooter : MonoBehaviour
 {
     [Tooltip("Shell prefab.")]
     public GameObject prefabShell;
-    [Tooltip("The force at which the shell is launched.")]
-    public float launchForce;
     [Tooltip("Number of seconds between each shot.")]
     public float fireRate;
 
     public void FireShell()
     {
         GameObject shell = Instantiate(prefabShell, transform.position, transform.rotation);
-        Rigidbody rb = shell.GetComponent<Rigidbody>();
-        rb.AddForce(transform.rotation * Vector3.forward * launchForce, ForceMode.Impulse);
+        shell.GetComponent<Shell>().Fire();
     }
 
     private void Start()
