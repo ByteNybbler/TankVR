@@ -38,8 +38,10 @@ public class TankFireButton : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(name + " entered button trigger.");
         if (other.tag == "Controller")
         {
+            Debug.Log("CONTROLLER OMG");
             Press();
         }
     }
