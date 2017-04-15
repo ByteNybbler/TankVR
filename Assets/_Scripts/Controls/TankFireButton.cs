@@ -32,23 +32,13 @@ public class TankFireButton : MonoBehaviour
     private void Start()
     {
         compSnapZone = snapZone.GetComponent<VRTK_SnapDropZone>();
-        compSnapZone.ObjectEnteredSnapDropZone += VRTK_SnapDropZone_ObjectEnteredSnapDropZone;
-        compSnapZone.ObjectExitedSnapDropZone += VRTK_SnapDropZone_ObjectExitedSnapDropZone;
+        compSnapZone.ObjectSnappedToDropZone += VRTK_SnapDropZone_ObjectSnappedToDropZone;
+        compSnapZone.ObjectUnsnappedFromDropZone += VRTK_SnapDropZone_ObjectUnsnappedFromDropZone;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void VRTK_SnapDropZone_ObjectSnappedToDropZone(object sender, SnapDropZoneEventArgs e)
     {
-        Debug.Log(name + " entered button trigger.");
-        if (other.tag == "Controller")
-        {
-            Debug.Log("CONTROLLER OMG");
-            Press();
-        }
-    }
-
-    private void VRTK_SnapDropZone_ObjectEnteredSnapDropZone(object sender, SnapDropZoneEventArgs e)
-    {
-        Debug.Log("ObjectEnteredSnapDropZone");
+        Debug.Log("ObjectSnappedToDropZone");
         GameObject obj = e.snappedObject;
         if (obj.tag == "ShellCasing")
         {
@@ -57,13 +47,13 @@ public class TankFireButton : MonoBehaviour
         }
     }
 
-    private void VRTK_SnapDropZone_ObjectExitedSnapDropZone(object sender, SnapDropZoneEventArgs e)
+    private void VRTK_SnapDropZone_ObjectUnsnappedFromDropZone(object sender, SnapDropZoneEventArgs e)
     {
-        Debug.Log("ObjectExitedSnapDropZone");
+        Debug.Log("ObjectUnsnappedFromDropZone");
         isShellCasingSnapped = false;
     }
 
-    private void Press()
+    public void Press()
     {
         if (isShellCasingSnapped)
         {
