@@ -59,6 +59,8 @@ public class TankFireButton : MonoBehaviour
         {
             // Fire the shell!
             shellCasing.GetComponent<ShellCasing>().Fire(instanceShellEmitter);
+            compSnapZone.ForceUnsnap();
+            isShellCasingSnapped = false;
         }
         else
         {
