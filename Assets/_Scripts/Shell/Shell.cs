@@ -18,6 +18,7 @@ public class Shell : MonoBehaviour
 
     private void Awake()
     {
+        compAudio = GetComponent<AudioSource>();
         compRigidbody = GetComponent<Rigidbody>();
     }
 
