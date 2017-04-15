@@ -1,15 +1,78 @@
 fileFormatVersion: 2
-guid: cc3aa63ef06a014408d9eee0a0a7fe92
-timeCreated: 1492233698
+guid: 12670379f86e1b441abedde12cdea209
+timeCreated: 1492240467
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
+    100002: group7
+    100004: group8
+    100006: pasted__group7
+    100008: pasted__pasted__pCube6
+    100010: pasted__pCube6
+    100012: pasted__pCube6 1
+    100014: pCube6
+    100016: pCylinder3
+    100018: polySurface1
+    100020: polySurface2
+    100022: polySurface3
+    100024: polySurface4
+    100026: polySurface5
+    100028: polySurface6
+    100030: polySurface7
+    100032: polySurface8
+    100034: polySurface9
+    100036: transform10
+    100038: transform11
+    100040: transform12
+    100042: transform13
+    100044: transform14
+    100046: transform15
+    100048: transform16
+    100050: transform17
+    100052: transform18
+    100054: transform19
+    100056: transform7
+    100058: transform8
+    100060: transform9
     400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: pCylinder3
+    400002: group7
+    400004: group8
+    400006: pasted__group7
+    400008: pasted__pasted__pCube6
+    400010: pasted__pCube6
+    400012: pasted__pCube6 1
+    400014: pCube6
+    400016: pCylinder3
+    400018: polySurface1
+    400020: polySurface2
+    400022: polySurface3
+    400024: polySurface4
+    400026: polySurface5
+    400028: polySurface6
+    400030: polySurface7
+    400032: polySurface8
+    400034: polySurface9
+    400036: transform10
+    400038: transform11
+    400040: transform12
+    400042: transform13
+    400044: transform14
+    400046: transform15
+    400048: transform16
+    400050: transform17
+    400052: transform18
+    400054: transform19
+    400056: transform7
+    400058: transform8
+    400060: transform9
+    2300000: pasted__pCube6
+    2300002: //RootNode
+    3300000: pasted__pCube6
+    3300002: //RootNode
+    4300000: pasted__pCube6
+    4300002: Base
     9500000: //RootNode
   materials:
     importMaterials: 1
