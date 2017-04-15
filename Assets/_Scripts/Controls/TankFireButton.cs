@@ -48,6 +48,7 @@ public class TankFireButton : MonoBehaviour
 
     private void VRTK_SnapDropZone_ObjectEnteredSnapDropZone(object sender, SnapDropZoneEventArgs e)
     {
+        Debug.Log("ObjectEnteredSnapDropZone");
         GameObject obj = e.snappedObject;
         if (obj.tag == "ShellCasing")
         {
@@ -58,6 +59,7 @@ public class TankFireButton : MonoBehaviour
 
     private void VRTK_SnapDropZone_ObjectExitedSnapDropZone(object sender, SnapDropZoneEventArgs e)
     {
+        Debug.Log("ObjectExitedSnapDropZone");
         isShellCasingSnapped = false;
     }
 
