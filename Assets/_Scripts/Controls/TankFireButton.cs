@@ -33,7 +33,7 @@ public class TankFireButton : MonoBehaviour
     {
         compSnapZone = snapZone.GetComponent<VRTK_SnapDropZone>();
         compSnapZone.ObjectEnteredSnapDropZone += VRTK_SnapDropZone_ObjectEnteredSnapDropZone;
-        compSnapZone.ObjectExitedSnapDropZone +=
+        compSnapZone.ObjectExitedSnapDropZone += VRTK_SnapDropZone_ObjectExitedSnapDropZone;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -68,7 +68,10 @@ public class TankFireButton : MonoBehaviour
         }
         else
         {
-            compAudio.PlayOneShot(soundFailure);
+            if (soundFailure != null)
+            {
+                compAudio.PlayOneShot(soundFailure);
+            }
         }
     }
 }

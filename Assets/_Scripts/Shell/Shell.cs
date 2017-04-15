@@ -31,6 +31,9 @@ public class Shell : MonoBehaviour
     {
         compRigidbody.AddForce(transform.rotation * Vector3.forward * launchForce, ForceMode.Impulse);
         // Play firing sound.
-        compAudio.PlayOneShot(soundFire);
+        if (soundFire != null)
+        {
+            compAudio.PlayOneShot(soundFire);
+        }
     }
 }

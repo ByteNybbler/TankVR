@@ -17,6 +17,9 @@ public class FaceRigidbodyDirection : MonoBehaviour
 
     private void Update()
     {
-        transform.rotation = Quaternion.LookRotation(compRigidbody.velocity);
+        if (compRigidbody.velocity != Vector3.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(compRigidbody.velocity);
+        }
     }
 }
