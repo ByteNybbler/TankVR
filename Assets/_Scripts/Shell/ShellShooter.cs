@@ -1,5 +1,5 @@
 ﻿// Author(s): Paul Calande
-// Class that shoots shells.
+// Test class that shoots shells periodically.
 
 using System.Collections;
 using System.Collections.Generic;

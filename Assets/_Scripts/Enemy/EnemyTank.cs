@@ -4,23 +4,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyTank : MonoBehaviour
 {
-    public delegate void DiedHandler(GameObject obj);
-    public event DiedHandler Died;
+    // Component references.
+    NavMeshAgent compAgent;
 
-    private void Die()
+    private void Awake()
     {
-        OnDied(gameObject);
-        Destroy(gameObject);
+        compAgent = GetComponent<NavMeshAgent>();
     }
 
-    private void OnDied(GameObject obj)
+    private void Update()
     {
-        if (Died != null)
-        {
-            Died(obj);
-        }
+        // Aim at player.
     }
 }
